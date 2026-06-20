@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Mídia - Exemplos Práticos</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; background-color: #fafafa; }
+        nav { background: #222; padding: 12px; border-radius: 6px; }
+        nav a { color: #00bcd4; margin-right: 20px; text-decoration: none; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .caixa-exemplo { background: white; padding: 20px; margin: 25px 0; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-left: 6px solid #00bcd4; }
+        video, audio { display: block; margin-top: 15px; width: 100%; max-width: 550px; }
+        .video-container { margin-top: 15px; position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Laboratório Prático</a>
+        <a href="edu-explicacao.html">Guia de Atributos Teóricos</a>
+    </nav>
+
+    <h1>Estudo Prático: Recursos de Mídia Nativa no HTML5</h1>
+    <p>Abaixo você pode interagir com os players de áudio e vídeo controlados diretamente pelas APIs do navegador, eliminando antigos plugins de terceiros.</p>
+    
+    <div class="caixa-exemplo">
+        <h3>1. Demonstração de Áudio Nativo (&lt;audio&gt;)</h3>
+        <p>Abaixo, um reprodutor carregando um arquivo MP3 externo usando o atributo de controles visuais.</p>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Seu navegador não oferece suporte para reprodução de áudio.
+        </audio>
+    </div>
+
+    <div class="caixa-exemplo">
+        <h3>2. Demonstração de Vídeo Nativo (&lt;video&gt;)</h3>
+        <p>Abaixo, um reprodutor de vídeo renderizando um arquivo MP4 com capa de espera (poster).</p>
+        <video controls poster="https://via.placeholder.com/640x360/00bcd4/ffffff?text=Player+de+Video+HTML5">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Seu navegador não oferece suporte para reprodução de vídeo.
+        </video>
+    </div>
+
+    <div class="caixa-exemplo">
+        <h3>3. Integração Externa via YouTube (Iframe)</h3>
+        <p>Para vídeos de platforms de streaming como o YouTube, utilizamos a incorporação via <code>&lt;iframe&gt;</code>:</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
